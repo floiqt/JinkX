@@ -48,7 +48,7 @@ if script_id then
         }
     )
     
-    if not table.find(keyless_script, script_id) then
+    if table.find(keyless_script, script_id) then
         -- loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/" .. script_id .. ".lua"))()
         local authentication_module = loadstring(game:HttpGet("https://raw.githubusercontent.com/PThitipat/master/main/keysystem.lua"))()
         local auth_status = authentication_module(script_id)
